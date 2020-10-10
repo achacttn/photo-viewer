@@ -1,0 +1,21 @@
+.AppContainer {
+    width: 100%;
+    height: 100%;
+    /* padding: 8px; */
+}
+
+.AppContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.HeaderContainer {
+    /* flex: 1 0 0; */
+    height: 48px;
+}
+
+.LibraryContainer {
+    flex: 1 0 0;
+}
