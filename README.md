@@ -26,6 +26,14 @@
 
 - Improvements can be made with more error handling and testing.
 
+### Online resources used
+
+- [React docs](https://reactjs.org/docs/hooks-reference.html)
+
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
+
+- [CSS tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
 ### Attributions
 
 - Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>

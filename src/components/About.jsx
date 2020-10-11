@@ -15,8 +15,8 @@ const About = () => {
   return (
     <div className={style.AboutContainer}>
       <div className={style.AboutContent}>
-        <p>Hello!</p>
-        <p>A little about me.</p>
+        <p>Hello! My name is Scott (or 이창)</p>
+        <p>Here is a little about me.</p>
         <p>I am from New Zealand, but I have also lived in Russia.</p>
         <img src={about01} alt=""/>
         <p>I have one sibling - younger sister (dad took the picture)</p>
@@ -29,7 +29,7 @@ const About = () => {
         <img src={about05} alt=""/>
         <p>and Princess Mononoke.</p>
         <img src={about06} alt=""/>
-        <p>Aside from science, I also like to read about psychology, geopolitics, and history.</p>
+        <p>I like science, but also enjoy broad range of topics like such as psychology, geopolitics, and history.</p>
         <p>Thanks for visiting this page!</p>
       </div>
     </div>

@@ -10,7 +10,7 @@ import Library from './components/Library';
 import About from './components/About';
 
 const App = () => {
-  const [pictureLayoutState, setPictureLayoutState] = React.useState(0);
+  const [pictureLayoutState, setPictureLayoutState] = React.useState(2);
   const toggleLayout = () => {
     setPictureLayoutState(pictureLayoutState => (pictureLayoutState+1)%3)
   }
