@@ -11,12 +11,18 @@ import Library from './components/Library';
 import About from './components/About';
 
 const App = () => {
-  const [rawImageState, setRawImagesState] = React.useState([]);
+  const [processedImagesState, setProcessedImagesState] = React.useState([]);
+  const [rawImagesState, setRawImagesState] = React.useState([]);
 
-  // React.useEffect(() => {
-  //   console.log('=== App.jsx ===');
-  //   console.log('rawImageState, setRawImagesState: ', rawImageState, setRawImagesState);
-  // });
+  React.useEffect(()=>{
+    let batch = [];
+    for( let i=0; i<rawImagesState.length; i++ ){
+      let { alt_description, created_at, description, exif, id, location, urls, views } = rawImagesState[i];
+      let relData = { alt_description, created_at, description, exif, id, location, urls, views };
+      batch.push(relData);
+    }
+    setProcessedImagesState(batch);
+  }, [rawImagesState]);
 
   return (
     <BrowserRouter>
@@ -33,7 +39,7 @@ const App = () => {
                   <About />
                 </Route>
                 <Route path="/">
-                  <Library rawData={rawImageState}/>
+                  <Library processedData={processedImagesState}/>
                 </Route>
               </Switch>
             </div>

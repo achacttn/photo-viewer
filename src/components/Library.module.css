@@ -2,8 +2,9 @@
     height: 100%;
     background-color: aqua;
     /* padding: 4px; */
+    /* overflow: hidden; */
 }
 
 .LibraryContent {
-
+    /* overflow-y: scroll; */
 }
