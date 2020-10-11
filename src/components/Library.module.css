@@ -1,15 +1,124 @@
 .LibraryContainer {
+    /* max-height: 100%; */
     height: 100%;
-    background-color: aqua;
-    /* overflow-y: scroll; */
-    /* padding: 4px; */
-    /* overflow: hidden; */
-    /* display: flex; */
-    padding: 20px;
+    padding: 0px 24px;
 }
 
 .LibraryContent {
-    border: 2px solid red;
+    /* background-color: black; */
+    max-width: 975px;
+    min-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+    max-height: 100%;
     height: 100%;
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    display: flex;
+    flex-flow: row wrap;
+}
+.LibraryContent::-webkit-scrollbar {
+    display: none;
+}
+
+.FrameContainer1 {
+    /* background-color: black; */
+    width: 100%;
+}
+
+.FrameContainer2 {
+    /* background-color: black; */
+    width: 50%;
+    height: 40vw;
+    max-height: 487.5px;
+    float: left;
+}
+
+.FrameContainer3 {
+    /* background-color: black; */
+    width: 33.33%;
+    height: 28vw;
+    max-height: 325px;
+    float: left;
+}
+
+.FrameImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(100%);
+    /* background-color: black; */
+}
+.FrameImage:hover {
+    transition: filter;
+    filter: brightness(70%);
+}
+
+.Lightbox {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    /* opacity: 0.7; */
+    /* filter: blur(25px); */
+    position: fixed;
+    z-index: 2;
+}
+
+.LightboxContent {
+    font-size: 24px;
+    color: black;
+    line-height: 20px;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    /* display: grid;
+    grid-template: auto / 50% 50%; */
+    /* align-items: stretch; */
+}
+
+.LightboxImage {
+    /* width: 100%; */
+    margin: auto auto;
+    flex: 1 0 0;
+}
+.LightboxText {
+    flex: 1 0 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;;
+    align-items: left;
+    word-wrap: break-word;
+}
+.LightboxText > p {
+    padding: 0px 12px;
+    margin: 4px 0px;
+    line-height: 1.1em;
+}
+/* .LightboxContent > img {
+    width: 100%;
+    object-fit: cover;
+} */
+
+@media (max-width: 800px){
+    .LibraryContainer {
+        padding: 0px 0px;
+    }
+    .LightboxContent {
+        /* padding: 24px 0px; */
+        flex-flow: column nowrap;
+    }
+    .LightboxImage {
+        /* max-width: 50%; */
+        /* max-height: 50%; */
+    }
+    .LightboxText {
+        font-size: 12px;
+    }
+    .LightboxText > p {
+        margin: 2px 0px;
+    }
 }

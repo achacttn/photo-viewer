@@ -12,12 +12,11 @@
 }
 
 .HeaderContainer {
-    /* flex: 1 0 0; */
-    height: 48px;
+    height: 72px;
 }
 
 .PageContainer {
+    flex: 1 0 0;
     height: 100%;
-    /* flex: 1 0 0; */
-    /* overflow-y: scroll; */
+    max-height: calc(100% - 72px);
 }

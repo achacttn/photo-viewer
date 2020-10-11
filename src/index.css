@@ -57,7 +57,7 @@ table {
 }
 
 html {
-	background-color: rgba(200,0,0,0.3);
+	/* background-color: rgba(200,0,0,0.3); */
     font-family: Arial;
     width: 100vw;
     height: 100vh;
@@ -69,7 +69,11 @@ html {
     height: 100%;
 }
 
-@media (min-width: 360px){
+/* img {
+    line-height: 0;
+} */
+
+/* @media (min-width: 360px){
     html {
         background-color: #ffa50040;
     }
@@ -97,4 +101,4 @@ html {
     html {
         background-color: #ee82ee40;
     }
-}
+} */

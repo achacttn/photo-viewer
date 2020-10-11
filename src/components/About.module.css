@@ -2,8 +2,36 @@
     height: 100%;
     background-color: lemonchiffon;
     /* padding: 4px; */
+    overflow-y: scroll;
 }
 
 .AboutContent {
+    max-width: 975px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: 16px;
+    padding: 24px 12px;
+}
+.AboutContent > p {
+    margin: 4px 0px;
+}
+.AboutContent > img {
+    margin: 8px 0px;
+    width: 60%;
+    max-width: 100%;
+    height: auto;
+}
 
+@media (min-width: 360px){
+    .AboutContent {
+        font-size: 24px;
+        padding: 24px 36px;
+    }
+    .AboutContent > p {
+        margin: 8px 0px;
+    }
+    .AboutContent > img {
+        margin: 20px 0px;
+    }
 }

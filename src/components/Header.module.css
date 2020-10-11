@@ -1,17 +1,28 @@
 .HeaderContainer {
+    margin: 0 auto;
     height: 100%;
-    background-color: cornflowerblue;
-    /* padding: 4px; */
+    padding: 0px 6px;
+    background: #17bee8; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #17bee8 0%, #00a9b2 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #17bee8 0%,#00a9b2 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #17bee8 0%,#00a9b2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17bee8', endColorstr='#00a9b2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 .HeaderContent {
+    min-width: 360px;
+    max-width: 975px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
 }
 
 .MainTitle {
-    font-size: 1.6em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2em;
     margin: 0px 8px;
 }
 
@@ -24,7 +35,41 @@
     padding: 12px;
     width: 48px;
     height: 48px;
+    border-radius: 12px;
 }
 .HeaderIcon:hover {
-    background-color: red;
+    background-color: rgb(244, 247, 249);
+}
+
+.Settings {
+    margin-left: initial;
+}
+
+.DisplayMode {
+    /* margin-left: auto; */
+    padding: 12px;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+}
+.DisplayMode:hover {
+    background-color: rgb(244, 247, 249);
+}
+
+@media (min-width: 340px){
+    .HeaderContainer {
+        padding: 0px 12px;
+    }
+    .Settings {
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 400px){
+    .HeaderContainer {
+        /* padding: 0px 24px; */
+    }
+    .MainTitle {
+        font-size: 1.6em;
+    }
 }

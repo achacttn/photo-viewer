@@ -4,10 +4,25 @@ import style from './Header.module.css';
 import logo from '../assets/logo.png';
 import iconHome from '../assets/icon-home.svg';
 import iconAbout from '../assets/icon-about.svg';
-import iconLayoutGrid from '../assets/layout-option-grid.svg';
-import iconLayoutSingle from '../assets/layout-option-single.svg';
+import iconLayout1 from '../assets/layout1.svg';
+import iconLayout2 from '../assets/layout2.svg';
+import iconLayout3 from '../assets/layout3.svg';
 
-const Header = () => {
+const Header = ({ currentLayoutMode, toggleLayout }) => {
+
+  const determineNextLayout = () => {
+    switch (currentLayoutMode) {
+      case 0:
+        return iconLayout1;
+      case 1:
+        return iconLayout2;
+      case 2:
+        return iconLayout3
+      default:
+        break;
+    }
+  }
+
   const currentLocation = useLocation();
 
   return (
@@ -19,12 +34,11 @@ const Header = () => {
         <Link to="/about"><img className={style.HeaderIcon} src={iconAbout} alt="About icon" /></Link>
         {
             currentLocation.pathname === '/'
-            && (
-            <div className={style.ViewSettings}>
-              <img className={style.HeaderIcon} src={iconLayoutGrid} alt="Grid layout" />
-              <img className={style.HeaderIcon} src={iconLayoutSingle} alt="Single layout" />
+            && 
+            <div className={style.Settings}>
+              <img className={style.DisplayMode} src={determineNextLayout()} alt="" onClick={toggleLayout}/>
+
             </div>
-            )
         }
 
       </div>
