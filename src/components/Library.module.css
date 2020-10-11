@@ -1,13 +1,15 @@
 .LibraryContainer {
     height: 100%;
     background-color: aqua;
+    /* overflow-y: scroll; */
     /* padding: 4px; */
     /* overflow: hidden; */
-    display: flex;
+    /* display: flex; */
+    padding: 20px;
 }
 
 .LibraryContent {
+    border: 2px solid red;
+    height: 100%;
     /* overflow-y: scroll; */
-    display: flex;
-    flex-flow: column nowrap;
 }
