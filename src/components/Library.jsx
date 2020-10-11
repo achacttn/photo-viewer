@@ -12,7 +12,7 @@ const Library = ({ processedData }) =>{
     <div className={style.LibraryContainer}>
       <div className={style.LibraryContent}>
         {
-          processedData.map( dataObj => <div>{ JSON.stringify(dataObj) }</div>)
+          processedData.map( dataObj => <div><img src={dataObj.urls.thumb} alt=""/></div>)
         }
       </div>
     </div>

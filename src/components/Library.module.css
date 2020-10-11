@@ -3,8 +3,11 @@
     background-color: aqua;
     /* padding: 4px; */
     /* overflow: hidden; */
+    display: flex;
 }
 
 .LibraryContent {
     /* overflow-y: scroll; */
+    display: flex;
+    flex-flow: column nowrap;
 }
