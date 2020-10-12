@@ -70,23 +70,27 @@
 .LightboxContent {
     font-size: 24px;
     color: black;
-    line-height: 20px;
+    line-height: 12px;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    /* display: grid;
-    grid-template: auto / 50% 50%; */
-    /* align-items: stretch; */
 }
 
 .LightboxImage {
-    /* width: 100%; */
     margin: auto auto;
-    flex: 1 0 0;
+    object-fit: contain;
+    flex: 1 0 50%;
+    max-width: 50%;
+    max-height: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
 }
+
 .LightboxText {
-    flex: 1 0 0;
+    flex: 1 0 50%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;;
@@ -98,10 +102,6 @@
     margin: 4px 0px;
     line-height: 1.1em;
 }
-/* .LightboxContent > img {
-    width: 100%;
-    object-fit: cover;
-} */
 
 @media (max-width: 800px){
     .LibraryContainer {
@@ -110,13 +110,17 @@
     .LightboxContent {
         /* padding: 24px 0px; */
         flex-flow: column nowrap;
+        /* max-width: 100%; */
+        /* max-height: 50%; */
     }
     .LightboxImage {
         /* max-width: 50%; */
-        /* max-height: 50%; */
+        max-height: 50%;
+        max-width: 100%;
     }
     .LightboxText {
-        font-size: 12px;
+        line-height: 1em;
+        font-size: 10px;
     }
     .LightboxText > p {
         margin: 2px 0px;
